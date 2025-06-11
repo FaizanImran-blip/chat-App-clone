@@ -1,16 +1,82 @@
-# flutter_ui_design
+# 📱 Flutter ChatApp Clone
 
-A new Flutter project.
+A modern, responsive chat application built with Flutter, inspired by popular messaging apps. This clone includes clean UI, reusable widgets, and future-ready placeholders for chat functionalities.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔐 Login & Register with email
+- 💬 Chat List UI
+- 🧑‍🤝‍🧑 1-on-1 Chat Screen (UI only for now)
+- 📦 Modular, scalable code structure
+- 🎨 Clean Material Design
+- 📱 Responsive layout
+- 🛠️ Placeholder for backend integration
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 Screenshots
+
+### 🏠 Home UI
+
+![Home UI](assets/WhatsApp_Image_2025-06-11_at_7.58.34_AM.jpeg)
+
+### 💬 Chat List
+
+![Chat List](assets/# 📱 Flutter ChatApp Clone
+
+A modern, responsive chat application built with Flutter, inspired by popular messaging apps. This clone includes clean UI, reusable widgets, and future-ready placeholders for chat functionalities.
+
+---
+
+## 🚀 Features
+
+- 🔐 Login & Register with email
+- 💬 Chat List UI
+- 🧑‍🤝‍🧑 1-on-1 Chat Screen (UI only for now)
+- 📦 Modular, scalable code structure
+- 🎨 Clean Material Design
+- 📱 Responsive layout
+- 🛠️ Placeholder for backend integration
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home UI
+
+![Home UI](assets/WhatsApp_Image_2025-06-11_at_7.58.34_AM.jpeg)
+
+### 💬 Chat List
+
+![Chat List](assets/WhatsApp_Image_2025-06-11_at_7.58.34_AM.jpeg)
+
+---
+
+## 🏗️ Tech Stack
+
+- **Flutter** – UI toolkit for beautiful native apps
+- **Dart** – Programming language used with Flutter
+- **Material UI** – Built-in Flutter widgets for clean design
+- *(Optional future)* Firebase or Supabase for backend & real-time features
+
+---
+
+## 📂 Folder Structure (Optional)
+
+)
+
+---
+
+## 🏗️ Tech Stack
+
+- **Flutter** – UI toolkit for beautiful native apps
+- **Dart** – Programming language used with Flutter
+- **Material UI** – Built-in Flutter widgets for clean design
+- *(Optional future)* Firebase or Supabase for backend & real-time features
+
+---
+
+## 📂 Folder Structure (Optional)
+
