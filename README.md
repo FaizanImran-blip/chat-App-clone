@@ -33,6 +33,6 @@ A modern, responsive chat application built with Flutter, inspired by popular me
 - **Flutter** – UI toolkit for beautiful native apps
 - **Dart** – Programming language used with Flutter
 - **Material UI** – Built-in Flutter widgets for clean design
-- *(Optional future)* Firebase or Supabase for backend & real-time features
+- *(Pending)* Firebase or Supabase for backend & real-time features
 
 
