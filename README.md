@@ -20,11 +20,11 @@ A modern, responsive chat application built with Flutter, inspired by popular me
 
 ### 🏠 Home UI
 
-![Home UI](https://drive.google.com/file/d/1shLo9f2Zx0lZUZbOPUAPcbRq9AB7ViwX/view)
+![Home UI](https://raw.githubusercontent.com/FaizanImran-blip/chat-App-clone/refs/heads/main/assets/WhatsApp%20Image%202025-06-11%20at%207.58.34%20AM.jpeg)
 
 ### 💬 Chat List
 
-![Chat List](https://drive.google.com/file/d/1shLo9f2Zx0lZUZbOPUAPcbRq9AB7ViwX/view)
+![Chat List](https://raw.githubusercontent.com/FaizanImran-blip/chat-App-clone/refs/heads/main/assets/WhatsApp%20Image%202025-06-11%20at%207.59.00%20AM.jpeg)
 
 ---
 
