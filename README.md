@@ -35,7 +35,4 @@ A modern, responsive chat application built with Flutter, inspired by popular me
 - **Material UI** – Built-in Flutter widgets for clean design
 - *(Optional future)* Firebase or Supabase for backend & real-time features
 
----
-
-## 📂 Folder Structure (Optional)
 
