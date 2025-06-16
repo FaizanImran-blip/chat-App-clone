@@ -1,5 +1,5 @@
 # 📱 Flutter ChatApp Clone
-
+-
 A modern, responsive chat application built with Flutter, inspired by popular messaging apps. This clone includes clean UI, reusable widgets, and future-ready placeholders for chat functionalities.
 
 ---
