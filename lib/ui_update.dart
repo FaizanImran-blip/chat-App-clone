@@ -7,11 +7,13 @@ void main() {
     home: Main(),
   ));
 }
-
 class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: const _CenterFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: const _CurvedBottomNavigationBar(),
       backgroundColor:Color(0xFFFFEBD0),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -44,7 +46,7 @@ class Main extends StatelessWidget {
       body: Column(
         children: [
           Navi(),
-          Expanded(child: ChatList()), // Adding chat list here
+          Expanded(child: ChatList()),
         ],
       ),
     );
@@ -53,12 +55,20 @@ class Main extends StatelessWidget {
 
 class ChatList extends StatelessWidget {
   final List<Message> messages = [
-    Message(name: "Hamza salman", time: "12:23", text: "Hey! Are you free to work later?", unread: 2),
-    Message(name: "Ali murtaza", time: "11:43", text: "Hey! Are you free to work later?"),
-    Message(name: "Ahmad Miraj", time: "11:24", text: "Hey! Are you free to work later?"),
-    Message(name: "Salman", time: "09:23", text: "Hey! Are you free to work later?"),
-    Message(name: "Mama", time: "20:32", text: "Hey! Are you free to work later?"),
-    Message(name: "Papa", time: "12:23", text: "Hey! Are you free to work later?"),
+    Message(name: "Hamza salman", time: "12:23", text: "Where are you yr?", unread: 2),
+    Message(name: "Ali murtaza", time: "11:43", text: "ok Allah Hafiz"),
+    Message(name: "Ahmad Miraj", time: "11:24", text: "ok bye"),
+    Message(name: "Salman", time: "09:23", text: "flutter code is best wese"),
+    Message(name: "Mama", time: "20:32", text: "kya hal hai bhai?"),
+    Message(name: "Faizan", time: "12:23", text: "ok bro bye"),
+    Message(name: "Imran Khan", time: "11:24", text: "ok bye"),
+    Message(name: "Apnacollege", time: "03:23", text: "flutter code is best wese"),
+    Message(name: "car", time: "20:32", text: "Allah Hafiz?"),
+    Message(name: "Cable shop ", time: "12:23", text: "ok bro bye"),
+    Message(name: "Book shop", time: "11:24", text: "ok bye"),
+    Message(name: "Salman", time: "02:23", text: "flutter code is best wese"),
+    Message(name: "saeed", time: "20:32", text: "kya hal hai bhai?"),
+    Message(name: "Bilal", time: "12:23", text: "ok bro bye"),
   ];
 
   @override
@@ -302,46 +312,174 @@ Widget _boxdesign5() {
     ],
   );
 }
-
 class DetailPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.transparent, title: Text("Box 1")),
-      body: Column(
-        children: [
-          Text("Box 1 Detail"),
-        ],
+      backgroundColor: const Color(0xFF278783),
+      appBar: AppBar(
+  backgroundColor: Colors.transparent,
+  elevation: 0,
+  leading: IconButton(
+    icon: Icon(Icons.chevron_left, color: Colors.white),
+    onPressed: () {
+      Navigator.pop(context); 
+    },
+  ),
+  title: Container(
+  child: Row(
+    children: [
+      Container(
+        margin: const EdgeInsets.only(right: 10),
+        padding: const EdgeInsets.all(6),
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: Color(0xFFFFEBD0),
+        ),
+        child: const Icon(
+          Icons.person,
+          color: Color(0xFF278783),
+          size: 26,
+        ),
+      ),
+      Container(
+        width: 160, // 👈 You can adjust width manually here
+        height: 34,
+        child: TextField(
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Color(0xFFFFEBD0),
+            hintText: "Search People...",
+            prefixIcon: Icon(Icons.search, color: Color(0xFF278783)),
+            contentPadding: EdgeInsets.symmetric(vertical: 0),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+          ),
+        ),
+      ),
+    ],
+  ),
+),
+),
+body: const Center(
+        child: Text(
+          "You find People soon.",
+          style: TextStyle(color: Color(0xFFFFEBD0)),
+        ),
       ),
     );
   }
 }
-
 class DetailPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.transparent, title: Text("Box 2")),
-      body: Column(
-        children: [
-          Text("Box 2 Detail"),
-        ],
+      backgroundColor: const Color(0xFF278783),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text("Invite Friends",style:TextStyle(color: Color(0xFFFFEBD0),)),
+      ),
+      body: ScrollConfiguration(
+        behavior: MyScrollBehavior(), // Custom scroll behavior
+        child: ListView(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          children: [
+            _buildTile(
+              icon: Icons.group,
+              title: "Explore Friends",
+              subtitle: "Find people with shared interests",
+            ),
+            _buildTile(
+              icon: Icons.location_on,
+              title: "Discover People Nearby",
+              subtitle: "See who’s around you",
+            ),
+            _buildTile(
+              icon: Icons.public,
+              title: "Build Your Network",
+              subtitle: "Expand your circle globally",
+            ),
+            _buildTile(
+              icon: Icons.handshake,
+              title: "Start a Friendship",
+              subtitle: "Meaningful conversations await",
+            ),
+            _buildTile(
+              icon: Icons.map,
+              title: "Nearby Users",
+              subtitle: "Location-based user discovery",
+            ),
+            _buildTile(
+              icon: Icons.recommend,
+              title: "Recommended for You",
+              subtitle: "People you may know",
+            ),
+            _buildTile(
+              icon: Icons.person_add,
+              title: "Add New Friends",
+              subtitle: "Send and receive requests",
+            ),
+            _buildTile(
+              icon: Icons.emoji_people,
+              title: "Meet & Greet",
+              subtitle: "Start connecting today",
+            ),
+            _buildTile(
+              icon: Icons.connect_without_contact,
+              title: "Connect with the World",
+              subtitle: "Break the ice, start chatting",
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Tile builder
+  Widget _buildTile({required IconData icon, required String title, String? subtitle}) {
+    return Card(
+      color: const Color(0xFF2E9D98),
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      child: ListTile(
+        leading: Icon(icon, color: Color(0xFFFFEBD0), size: 30),
+        title: Text(
+          title,
+          style: const TextStyle(
+            color: Color(0xFFFFEBD0),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        subtitle: subtitle != null
+            ? Text(subtitle, style: const TextStyle(color: Color(0xFFFFEBD0)))
+            : null,
+        trailing: const Icon(Icons.chevron_right, color: Color(0xFFFFEBD0)),
+        onTap: () {
+          // handle navigation
+        },
       ),
     );
   }
 }
-
 class DetailPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.transparent, title: Text("Box 3")),
+      backgroundColor:  Color(0xFF278783),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation:0,
+         title: Text("")),
       body: Column(
         children: [
-          Text("Box 3 Detail"),
+          Expanded(
+            child:Center(
+            child:Text("You Join Group soon.",style:TextStyle(color:Color(0xFFFFEBD0),),),
+          ),
+          ),
         ],
       ),
     );
@@ -352,11 +490,18 @@ class DetailPage4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.transparent, title: Text("Box 4")),
+      backgroundColor:  Color(0xFF278783),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation:0,
+         title: Text("")),
       body: Column(
         children: [
-          Text("Box 4 Detail"),
+          Expanded(
+            child:Center(
+            child:Text("Settings.",style:TextStyle(color:Color(0xFFFFEBD0),),),
+          ),
+          ),
         ],
       ),
     );
@@ -367,17 +512,42 @@ class DetailPage5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.transparent, title: Text("Box 5")),
+      backgroundColor: Color(0xFF278783),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(""),
+      ),
       body: Column(
         children: [
-          Text("Box 5 Detail"),
+          Expanded(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Text(
+                  "Thank you for using ChatApp!\n\n"
+                  "Our app is currently under development, and the Help & Support section will be available soon.\n\n"
+                  "We're working hard to add exciting features, including:\n\n"
+                  "• Real-time chat support\n"
+                  "• FAQs and troubleshooting tips\n"
+                  "• Profile and privacy guides\n"
+                  "• Contact support options",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Color(0xFFFFEBD0),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    height: 1.5,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
 class MyScrollBehavior extends ScrollBehavior {
   @override
   Widget buildScrollbar(BuildContext context, Widget child, ScrollableDetails details) {
@@ -389,4 +559,93 @@ class MyScrollBehavior extends ScrollBehavior {
         PointerDeviceKind.touch,
         PointerDeviceKind.mouse,
       };
+}
+//footer
+class _CenterFloatingButton extends StatelessWidget {
+  const _CenterFloatingButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top:40),
+      child: Container(
+        height: 64,
+        width: 64,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.orange,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.orange.withOpacity(0.6),
+              blurRadius: 20,
+              spreadRadius: 4,
+            ),
+          ],
+        ),
+        child: const Icon(
+          Icons.chat_bubble,
+          color: Color(0xFFFFEBD0),
+          size: 30,
+        ),
+      ),
+    );
+  }
+}
+
+class _CurvedBottomNavigationBar extends StatelessWidget {
+  const _CurvedBottomNavigationBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
+      notchMargin: 4,
+      elevation: 0,
+      child: Container(
+        height: 40,
+        decoration: const BoxDecoration(
+          color: Color(0xFF278783),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
+          ),
+        ),
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+          child: _NavBarIcons(),
+        ),
+      ),
+    );
+  }
+}
+
+class _NavBarIcons extends StatelessWidget {
+  const _NavBarIcons({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: const [
+        _NavBarIcon(icon: Icons.home),
+        _NavBarIcon(icon: Icons.search),
+        SizedBox(width: 48),
+        _NavBarIcon(icon: Icons.location_on),
+        _NavBarIcon(icon: Icons.menu),
+      ],
+    );
+  }
+}
+
+class _NavBarIcon extends StatelessWidget {
+  final IconData icon;
+  const _NavBarIcon({required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      icon,
+      color:Color(0xFFFFEBD0),
+    );
+  }
 }
